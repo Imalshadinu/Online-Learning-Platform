@@ -1,0 +1,62 @@
+.login-popup {
+    max-width: 90%;  // Ensure it doesn't overflow on small screens
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50vh;  // Full height of the viewport
+    padding: 20px;
+    background-color: #e0e0e0;  // Optional: background color for the whole page
+  }
+  
+  .login-popup h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .login-popup form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-popup label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .login-popup input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .login-popup input.ng-invalid.ng-touched {
+    border-color: #e74c3c;
+  }
+  
+  .login-popup .block {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .login-popup .text-primary {
+    color: #007bff;
+  }
+  
+  .login-popup button {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  

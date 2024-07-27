@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="login-popup">
+        <h2>Sign In</h2>
+        <br />
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <label for="email">Email: </label>
+            <input id="email" type="text" formControlName="email" />
+            <div
+                *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+                <div *ngIf="loginForm.controls['email'].errors?.['required']">
+                    Email is required.
+                </div>
+            </div>
+            <br />
+            <label for="password">Password: </label>
+            <input id="password" type="text" formControlName="password" />
+            <div
+                *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                <div *ngIf="loginForm.controls['password'].errors?.['required']">
+                    Password is required.
+                </div>
+            </div>
+            <div *ngIf="passwordErrorMessage" class="error">
+                {{ passwordErrorMessage }}
+              </div>
+            <button mat-raised-button type="submit" color="primary">Sign In</button>
+        </form>
+    </div>
+    </div>

@@ -1,0 +1,69 @@
+<div class="container">
+<div class="register-popup">
+    <h2>Sign Up</h2>
+    <br />
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName" />
+        <div
+            *ngIf="registrationForm.controls['firstName'].invalid && (registrationForm.controls['firstName'].dirty || registrationForm.controls['firstName'].touched)">
+            <div *ngIf="registrationForm.controls['firstName'].errors?.['required']">
+                First name is required.
+            </div>
+        </div>
+        <br />
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName" />
+        <div
+            *ngIf="registrationForm.controls['lastName'].invalid && (registrationForm.controls['lastName'].dirty || registrationForm.controls['lastName'].touched)">
+            <div *ngIf="registrationForm.controls['lastName'].errors?.['required']">
+                Last name is required.
+            </div>
+        </div>
+        <br />
+        <label for="email">Email: </label>
+        <input id="email" type="text" formControlName="email" />
+        <div
+            *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)">
+            <div *ngIf="registrationForm.controls['email'].errors?.['required']">
+                Email is required.
+            </div>
+        </div>
+        <br />
+        <label for="password">Password: </label>
+        <input id="password" type="text" formControlName="password" />
+        <div
+            *ngIf="registrationForm.controls['password'].invalid && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)">
+            <span class="block"
+                [ngClass]="{'text-primary': registrationForm.controls['password'].value?.match('^(?=.*[A-Z])')}">At
+                least one
+                uppercase
+                letter.</span>
+            <span class="block"
+                [ngClass]="{'text-primary': registrationForm.controls['password'].value?.match('(?=.*[a-z])')}">At least
+                one
+                lowercase
+                letter.</span>
+            <span class="block"
+                [ngClass]="{'text-primary': registrationForm.controls['password'].value?.match('(.*[0-9].*)')}">At least
+                one
+                digit.</span>
+            <span class="block"
+                [ngClass]="{'text-primary': registrationForm.controls['password'].value?.match('(?=.*[!@#$%^&*])')}">At
+                least
+                one
+                special
+                character.</span>
+            <span class="block"
+                [ngClass]="{'text-primary': registrationForm.controls['password'].value?.match('.{8,}')}">At least 8
+                characters
+                long.</span>
+        </div>
+        <button mat-raised-button type="submit" color="primary">Sign Up</button>
+        <br />
+        <div>
+            Already have an account? <a style="cursor: pointer; text-decoration: underline;" (click)="onSwitchToSignIn()">Login here</a>
+        </div>
+    </form>
+</div>
+</div>

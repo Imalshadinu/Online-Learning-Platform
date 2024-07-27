@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <span>Course Dashboard</span>
+    <span class="spacer"></span>
+    <button mat-button (click)="openRegisterPopup()">Register</button>
+    <button mat-button (click)="openSignInPopup()">Sign In</button>
+  </mat-toolbar>
+  
+  <div class="course-container">
+    <mat-card *ngFor="let course of courses" class="course-card">
+      <mat-card-title>{{ course.title }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ course.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>View</button>
+        <button mat-button>Enroll</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
