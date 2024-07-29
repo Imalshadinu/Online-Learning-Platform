@@ -1,0 +1,36 @@
+﻿Frontend System - Angular
+
+
+Reasons:
+* Component-Based Architecture.
+* Rich set of built-in features like form validation, HTTP client, and routing.
+* Two-way data binding feature, which simplifies the synchronization between the model and the view.
+* Strong community support and extensive documentation.
+
+
+Backend System - Node.js/Express.js
+
+
+Reasons:
+* Using JavaScript for both frontend (Angular) and backend (Node.js) enables a unified development environment.
+* Non-blocking I/O model.
+* Rich Ecosystem and Libraries.
+
+
+Database - MySQL
+
+
+Reasons:
+* Relational database management system that ensures data integrity and supports complex queries.
+* Supports vertical and horizontal scaling.
+* Widely adopted and supported.
+* ACID compliance guarantees reliable transaction processing, which is critical for operations like user registration and course enrollment.
+
+
+API Documentation
+
+
+Reasons:
+* Interactive API documentation.
+* Can be easily integrated with Express.js, automatically generating documentation based on the defined routes and their descriptions.
+* Follows the OpenAPI specification.
